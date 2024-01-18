@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа для шифрования/расшифрования методом маршрутной перстановки: Исходный файл coder.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Программа для шифрования/расшифрования методом маршрутной перстановки
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">coder</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">coder.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;cctype&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;locale&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;codecvt&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classcoder.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcoder.html">coder</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::wstring_convert&lt;std::codecvt_utf8&lt;wchar_t&gt;, <span class="keywordtype">wchar_t</span>&gt; codec;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">int</span> key1;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> getValidKey(std::wstring &amp; ws_key);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::wstring <a class="code" href="classcoder.html#af18c2ba3126708333010d213de93e4bf">getValidOpenText</a>(<span class="keyword">const</span> std::wstring &amp; ws_open_text);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::wstring <a class="code" href="classcoder.html#a9b5e39221fffae4a1b265eb1d0de130b">getValidCipherText</a>(<span class="keyword">const</span> std::wstring &amp; ws_cipher_text);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classcoder.html#ad337e1701b292a3576b1e447ba805aaf">   40</a></span>&#160;    <a class="code" href="classcoder.html#ad337e1701b292a3576b1e447ba805aaf">coder</a>()=<span class="keyword">delete</span>; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classcoder.html#ad337e1701b292a3576b1e447ba805aaf">coder</a>(std::wstring &amp; ws_key);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    std::wstring <a class="code" href="classcoder.html#a5cc5e401f04478a3eb8aad2cc0573b4e">encrypt</a>(<span class="keyword">const</span> std::wstring&amp; open_text);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    std::wstring <a class="code" href="classcoder.html#af6802e8ade7b9011fc73a97ce45c00f6">decrypt</a>(<span class="keyword">const</span> std::wstring&amp; cipher_text); <span class="comment">// расшифрование</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classcipher__error.html">   67</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcipher__error.html">cipher_error</a>: <span class="keyword">public</span> std::invalid_argument {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classcipher__error.html#aac662e216a84bfeb873303c7b88d029e">   72</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classcipher__error.html#aac662e216a84bfeb873303c7b88d029e">cipher_error</a> (<span class="keyword">const</span> std::string&amp; what_arg):</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        std::invalid_argument(what_arg) {}</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classcipher__error.html#a18cf27d9c2cd2538d3cb8f17e9a55f3e">   77</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classcipher__error.html#a18cf27d9c2cd2538d3cb8f17e9a55f3e">cipher_error</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* what_arg):</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        std::invalid_argument(what_arg) {}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
+<div class="ttc" id="aclasscipher__error_html"><div class="ttname"><a href="classcipher__error.html">cipher_error</a></div><div class="ttdoc">Класс вызова исключений</div><div class="ttdef"><b>Definition:</b> coder.h:67</div></div>
+<div class="ttc" id="aclasscipher__error_html_a18cf27d9c2cd2538d3cb8f17e9a55f3e"><div class="ttname"><a href="classcipher__error.html#a18cf27d9c2cd2538d3cb8f17e9a55f3e">cipher_error::cipher_error</a></div><div class="ttdeci">cipher_error(const char *what_arg)</div><div class="ttdoc">Обработка ошибки</div><div class="ttdef"><b>Definition:</b> coder.h:77</div></div>
+<div class="ttc" id="aclasscipher__error_html_aac662e216a84bfeb873303c7b88d029e"><div class="ttname"><a href="classcipher__error.html#aac662e216a84bfeb873303c7b88d029e">cipher_error::cipher_error</a></div><div class="ttdeci">cipher_error(const std::string &amp;what_arg)</div><div class="ttdoc">Обработка ошибки</div><div class="ttdef"><b>Definition:</b> coder.h:72</div></div>
+<div class="ttc" id="aclasscoder_html"><div class="ttname"><a href="classcoder.html">coder</a></div><div class="ttdoc">Класс для шифрования и расшифрования методом маршрутной перестановки</div><div class="ttdef"><b>Definition:</b> coder.h:22</div></div>
+<div class="ttc" id="aclasscoder_html_a5cc5e401f04478a3eb8aad2cc0573b4e"><div class="ttname"><a href="classcoder.html#a5cc5e401f04478a3eb8aad2cc0573b4e">coder::encrypt</a></div><div class="ttdeci">std::wstring encrypt(const std::wstring &amp;open_text)</div><div class="ttdoc">Зашифрование</div><div class="ttdef"><b>Definition:</b> coder.cpp:10</div></div>
+<div class="ttc" id="aclasscoder_html_a9b5e39221fffae4a1b265eb1d0de130b"><div class="ttname"><a href="classcoder.html#a9b5e39221fffae4a1b265eb1d0de130b">coder::getValidCipherText</a></div><div class="ttdeci">std::wstring getValidCipherText(const std::wstring &amp;ws_cipher_text)</div><div class="ttdoc">Метод класса, проверяющий расшифрованный текст на валидность</div><div class="ttdef"><b>Definition:</b> coder.cpp:81</div></div>
+<div class="ttc" id="aclasscoder_html_ad337e1701b292a3576b1e447ba805aaf"><div class="ttname"><a href="classcoder.html#ad337e1701b292a3576b1e447ba805aaf">coder::coder</a></div><div class="ttdeci">coder()=delete</div><div class="ttdoc">Запрет конструктора без параметров</div></div>
+<div class="ttc" id="aclasscoder_html_af18c2ba3126708333010d213de93e4bf"><div class="ttname"><a href="classcoder.html#af18c2ba3126708333010d213de93e4bf">coder::getValidOpenText</a></div><div class="ttdeci">std::wstring getValidOpenText(const std::wstring &amp;ws_open_text)</div><div class="ttdoc">Метод класса, проверяющий текс на валидность</div><div class="ttdef"><b>Definition:</b> coder.cpp:65</div></div>
+<div class="ttc" id="aclasscoder_html_af6802e8ade7b9011fc73a97ce45c00f6"><div class="ttname"><a href="classcoder.html#af6802e8ade7b9011fc73a97ce45c00f6">coder::decrypt</a></div><div class="ttdeci">std::wstring decrypt(const std::wstring &amp;cipher_text)</div><div class="ttdoc">Расшифрование</div><div class="ttdef"><b>Definition:</b> coder.cpp:29</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

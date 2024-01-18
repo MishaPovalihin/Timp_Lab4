@@ -1,0 +1,29 @@
+\begin{theindex}
+
+  \item {cipher\_error}, \hyperpage{2}
+    \subitem {cipher\_error}, \hyperpage{3}
+  \item {coder}, \hyperpage{3}
+    \subitem {coder}, \hyperpage{4}
+    \subitem {decrypt}, \hyperpage{4}
+    \subitem {encrypt}, \hyperpage{5}
+    \subitem {getValidCipherText}, \hyperpage{5}
+    \subitem {getValidOpenText}, \hyperpage{6}
+
+  \indexspace
+
+  \item {decrypt}
+    \subitem {coder}, \hyperpage{4}
+
+  \indexspace
+
+  \item {encrypt}
+    \subitem {coder}, \hyperpage{5}
+
+  \indexspace
+
+  \item {getValidCipherText}
+    \subitem {coder}, \hyperpage{5}
+  \item {getValidOpenText}
+    \subitem {coder}, \hyperpage{6}
+
+\end{theindex}

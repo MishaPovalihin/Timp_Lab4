@@ -1,0 +1,173 @@
+\hypertarget{classcoder}{}\doxysubsection{Класс coder}
+\label{classcoder}\index{coder@{coder}}
+
+
+Класс для шифрования и расшифрования методом маршрутной перестановки  
+
+
+
+
+{\ttfamily \#include $<$coder.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcoder_ad337e1701b292a3576b1e447ba805aaf}\label{classcoder_ad337e1701b292a3576b1e447ba805aaf}} 
+\mbox{\hyperlink{classcoder_ad337e1701b292a3576b1e447ba805aaf}{coder}} ()=delete
+\begin{DoxyCompactList}\small\item\em Запрет конструктора без параметров \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcoder_a85be86358bc9cb3895581334bc659340}{coder}} (std\+::wstring \&ws\+\_\+key)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \end{DoxyCompactList}\item 
+std\+::wstring \mbox{\hyperlink{classcoder_a5cc5e401f04478a3eb8aad2cc0573b4e}{encrypt}} (const std\+::wstring \&open\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Зашифрование \end{DoxyCompactList}\item 
+std\+::wstring \mbox{\hyperlink{classcoder_af6802e8ade7b9011fc73a97ce45c00f6}{decrypt}} (const std\+::wstring \&cipher\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Расшифрование \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcoder_a9c1d1a9d0ffa8aae56eab9fcf877da9d}\label{classcoder_a9c1d1a9d0ffa8aae56eab9fcf877da9d}} 
+int {\bfseries get\+Valid\+Key} (std\+::wstring \&ws\+\_\+key)
+\item 
+std\+::wstring \mbox{\hyperlink{classcoder_af18c2ba3126708333010d213de93e4bf}{get\+Valid\+Open\+Text}} (const std\+::wstring \&ws\+\_\+open\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Метод класса, проверяющий текс на валидность \end{DoxyCompactList}\item 
+std\+::wstring \mbox{\hyperlink{classcoder_a9b5e39221fffae4a1b265eb1d0de130b}{get\+Valid\+Cipher\+Text}} (const std\+::wstring \&ws\+\_\+cipher\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Метод класса, проверяющий расшифрованный текст на валидность \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcoder_a6fbe5c004970c40ab5480c1c5d5ebfd3}\label{classcoder_a6fbe5c004970c40ab5480c1c5d5ebfd3}} 
+std\+::wstring\+\_\+convert$<$ std\+::codecvt\+\_\+utf8$<$ wchar\+\_\+t $>$, wchar\+\_\+t $>$ {\bfseries codec}
+\item 
+\mbox{\Hypertarget{classcoder_a7608d19d03afacd2340a92e8c9b798e7}\label{classcoder_a7608d19d03afacd2340a92e8c9b798e7}} 
+int {\bfseries key1}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Подробное описание}
+Класс для шифрования и расшифрования методом маршрутной перестановки 
+
+Ключ Для шифрования -\/ метод encrypt для расшифровки -\/ метод decrypt \begin{DoxyWarning}{Предупреждения}
+Реализация для русского и английского языка! 
+\end{DoxyWarning}
+
+
+\doxysubsubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classcoder_a85be86358bc9cb3895581334bc659340}\label{classcoder_a85be86358bc9cb3895581334bc659340}} 
+\index{coder@{coder}!coder@{coder}}
+\index{coder@{coder}!coder@{coder}}
+\doxyparagraph{\texorpdfstring{coder()}{coder()}}
+{\footnotesize\ttfamily coder\+::coder (\begin{DoxyParamCaption}\item[{std\+::wstring \&}]{ws\+\_\+key }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em ws\+\_\+key} & Ключ для шифрования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Предупреждения}
+Ключ должен быть целым числов 
+\end{DoxyWarning}
+
+\begin{DoxyExceptions}{Исключения}
+{\em Invalide} & key, при неверном ключе \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsubsection{Методы}
+\mbox{\Hypertarget{classcoder_af6802e8ade7b9011fc73a97ce45c00f6}\label{classcoder_af6802e8ade7b9011fc73a97ce45c00f6}} 
+\index{coder@{coder}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!coder@{coder}}
+\doxyparagraph{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily wstring coder\+::decrypt (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{cipher\+\_\+text }\end{DoxyParamCaption})}
+
+
+
+Расшифрование 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em cipher\+\_\+text} & Зашифрованный текст на русском/английском языке \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Предупреждения}
+Текст не должен содержать цифры, специальные знаки. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Возвращает}
+result Расшифрованный текст 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \mbox{\hyperlink{classcipher__error}{cipher\+\_\+error}}} & Если в качестве текста введена пустая строка \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classcoder_a5cc5e401f04478a3eb8aad2cc0573b4e}\label{classcoder_a5cc5e401f04478a3eb8aad2cc0573b4e}} 
+\index{coder@{coder}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!coder@{coder}}
+\doxyparagraph{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily wstring coder\+::encrypt (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{open\+\_\+text }\end{DoxyParamCaption})}
+
+
+
+Зашифрование 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em open\+\_\+text} & Открытый текст на русском/английском языке \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Предупреждения}
+Текст не должен содержать цифры, специальные знаки. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Возвращает}
+result Зашифрованный текст 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \mbox{\hyperlink{classcipher__error}{cipher\+\_\+error}}} & Если в качестве текста введена пустая строка \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classcoder_a9b5e39221fffae4a1b265eb1d0de130b}\label{classcoder_a9b5e39221fffae4a1b265eb1d0de130b}} 
+\index{coder@{coder}!getValidCipherText@{getValidCipherText}}
+\index{getValidCipherText@{getValidCipherText}!coder@{coder}}
+\doxyparagraph{\texorpdfstring{getValidCipherText()}{getValidCipherText()}}
+{\footnotesize\ttfamily std\+::wstring coder\+::get\+Valid\+Cipher\+Text (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{ws\+\_\+cipher\+\_\+text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Метод класса, проверяющий расшифрованный текст на валидность 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em s} & Зашифрованный текст на русском/английском языке \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcoder_af18c2ba3126708333010d213de93e4bf}\label{classcoder_af18c2ba3126708333010d213de93e4bf}} 
+\index{coder@{coder}!getValidOpenText@{getValidOpenText}}
+\index{getValidOpenText@{getValidOpenText}!coder@{coder}}
+\doxyparagraph{\texorpdfstring{getValidOpenText()}{getValidOpenText()}}
+{\footnotesize\ttfamily std\+::wstring coder\+::get\+Valid\+Open\+Text (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{ws\+\_\+open\+\_\+text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Метод класса, проверяющий текс на валидность 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em s} & Текст на русском/английском языке \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+result 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+coder.\+h\item 
+coder.\+cpp\end{DoxyCompactItemize}

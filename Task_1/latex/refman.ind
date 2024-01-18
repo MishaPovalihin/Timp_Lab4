@@ -1,0 +1,25 @@
+\begin{theindex}
+
+  \item {convert}
+    \subitem {modAlphaCipher}, \hyperpage{3}
+
+  \indexspace
+
+  \item {decrypt}
+    \subitem {modAlphaCipher}, \hyperpage{3}
+
+  \indexspace
+
+  \item {encrypt}
+    \subitem {modAlphaCipher}, \hyperpage{4}
+
+  \indexspace
+
+  \item {modAlphaCipher}, \hyperpage{1}
+    \subitem {convert}, \hyperpage{3}
+    \subitem {decrypt}, \hyperpage{3}
+    \subitem {encrypt}, \hyperpage{4}
+    \subitem {modAlphaCipher}, \hyperpage{2}
+  \item {modAlphaCipher.h}, \hyperpage{4}
+
+\end{theindex}
